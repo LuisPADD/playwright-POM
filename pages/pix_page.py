@@ -9,6 +9,7 @@ class PixPage:
         
 
     def fazer_pix(self, chave, valor):
+        self.chave_pix.wait_for()
         self.chave_pix.fill(chave)
         self.valor_pix.fill(valor)
         self.enviar_pix.click()
