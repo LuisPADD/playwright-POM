@@ -12,3 +12,8 @@ class EmprestimosPage:
 
     def selecionar_valor_emprestimo(self, valor):
         self.page.get_by_role("radio", name=f"R$ {valor}").check()
+
+    def contratar_emprestimo(self, valor_desejado):
+        self.selecionar_valor_emprestimo(valor_desejado)
+        self.clicar_contratar_emprestimo()
+        
